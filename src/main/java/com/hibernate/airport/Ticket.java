@@ -1,8 +1,12 @@
 package com.hibernate.airport;
 
+import org.hibernate.annotations.ManyToAny;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +33,12 @@ public class Ticket {
         this.id = id;
         this.number = number;
     }
+
+    @ManyToOne
+    @Getter
+    @Setter
+    @JoinColumn(name = "PASSANGER_ID")
+    private Passenger passenger;
 
     
 }

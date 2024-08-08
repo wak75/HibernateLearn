@@ -52,6 +52,8 @@ public class Passenger {
         return Collections.unmodifiableList(tickets);
     }
 
-    public void add
+    public void addTicket(Ticket ticket){
+        tickets.add(ticket);
+    }
 
 }
