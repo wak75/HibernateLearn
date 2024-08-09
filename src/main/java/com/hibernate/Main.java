@@ -37,6 +37,11 @@ public class Main {
         Ticket wasTicket2 = new Ticket(3, "AA7890");
         Ticket shrutiTicket = new Ticket(2,"BB5678");
 
+        //setting the passangers for the ticket
+        wasTicket1.setPassenger(washim);
+        wasTicket2.setPassenger(washim);
+        shrutiTicket.setPassenger(shruti);
+
         //Assigning tickets to passangers
         washim.addTicket(wasTicket1);
         washim.addTicket(wasTicket2);
